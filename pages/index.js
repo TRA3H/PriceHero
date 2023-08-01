@@ -11,8 +11,8 @@ export default function Home() {
   const [searchField, setSearchField] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [isLoadingSearch, setIsLoadingSearch] = useState(false);
-  const { user } = useAuthStore()
-  const router = useRouter()
+  // const { user } = useAuthStore()
+  // const router = useRouter()
 
   async function handleSubmitButtonPressed() {
     setIsLoadingSearch(true);
@@ -39,14 +39,9 @@ export default function Home() {
     }
  };
 
- useEffect(() => {
-  if(!user)
-    router.push('/auth')
- }, [])
 
   return (
     <div>
-      {user ? (
         <LoadingOverlay
           active={isLoadingSearch}
           spinner
@@ -57,7 +52,7 @@ export default function Home() {
               </div>
               <hr />
               <div className='flex justify-center items-center flex-col pt-8 pb-8'>
-                <h2 className='text-3xl mb-32 text-slate-900 font-semibold text-center'>Welcome to Price HERO <br/><br/>{user.name}</h2>
+                <h2 className='text-3xl mb-32 text-slate-900 font-semibold text-center'>Welcome to Price HERO</h2>
                 <div className='flex justify-center'>
                     <h2 className="text-2xl">
                       Enter product to search for:
@@ -107,8 +102,6 @@ export default function Home() {
               </section>
           </div>
         </LoadingOverlay>
-      ) : 
-      (<></>)}
     </div>
   );
 }
