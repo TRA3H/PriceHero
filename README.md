@@ -62,5 +62,3 @@ Follow us on social media for updates and exciting news:
 - Instagram: [instagram.com/PriceHeroApp](link_to_your_instagram)
 
 Thank you for choosing PriceHero! Shop smart and save big!
-
-*Note: The above text is a sample README file for the "PriceHero" web application. Replace the placeholders (e.g., link_to_your_logo, link_to_your_twitter, etc.) with actual links and relevant information about your app. Also, make sure to include any legal disclaimers, terms of use, or privacy policies required for your application.*
